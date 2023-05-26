@@ -2,6 +2,22 @@
 
 /* #ffd200 */
 
+@font-face {
+    font-family: Akkurat;
+    src: url('/desafio_012/fontes/Akkurat.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+
+    --cor0: #ffffff;
+    --cor1: #ffd200;
+    --cor3: #272727;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-geral: Akkurat;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -13,14 +29,15 @@ html, body {
 }
 
 header {
-    background-color: #ffd200;
-    color: #272727;
+    background-color: var(--cor1);
+    color: var(--cor3);
     text-align: center;
 }
 
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-size: calc(24px + 2.5vw);
 }
 
 header > p {
@@ -39,7 +56,12 @@ header a:hover, footer a:hover {
 
 section {
     padding: 10vh 0 10vh 30px;
-    line-height: 2em;
+    line-height: 36px;
+}
+
+section > p {
+    font-family: var(--fonte-geral);
+    font-size: 24px;
 }
 
 section.normal {
@@ -53,7 +75,8 @@ section.imagem {
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: #27272771;
 }
 
