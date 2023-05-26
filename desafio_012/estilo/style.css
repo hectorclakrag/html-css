@@ -62,22 +62,42 @@ section {
 section > p {
     font-family: var(--fonte-geral);
     font-size: 24px;
+    padding-bottom: 2em;
 }
 
 section.normal {
-    background-color: #272727;
-    color: white;
+    background-color: white;
+    color: var(--cor3);
 }
 
 section.imagem {
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.391);
     background-color: #ffd200;
     color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 section.imagem > p {
-    display: inline-block;
-    padding: 5px;
-    background-color: #27272771;
+    /* display: inline-block; */
+    margin-left: -30px;
+    padding: 89.900px 28px ;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.714), rgba(0, 0, 0, 0.171));
+    /* background-color: rgba(0, 0, 0, 0.514); */
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url(/desafio_012/imagens/background001.jpg);
+    background-position: right center;
+    
+}
+
+section#img02 {
+    background-image: url(/desafio_012/imagens/background002.jpg);
 }
 
 footer {
