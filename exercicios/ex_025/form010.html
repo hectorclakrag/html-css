@@ -11,7 +11,7 @@
     <form action="arquivo.js" method="post" autocomplete="off">
         <p>
             <label for="iano">Em que ano voce nasceu? </label>
-            <input type="number" name="ano" id="iano" min="1900" max="2030" oninput="idade.innerHTML = ano_atual - Number(iano.value)">
+            <input type="number" name="ano" id="iano" min="1900" max="2030" oninput="calcIdade()">
         </p>
 
         <p>
@@ -26,7 +26,11 @@
     </form>
 
     <script>
-        let ano_atual = new Date().getFullYear();
+        function calcIdade(){
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+        
     </script>
 
 </body>
