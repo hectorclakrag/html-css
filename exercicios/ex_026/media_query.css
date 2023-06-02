@@ -2,3 +2,57 @@
 
 /*  todas as demais medias */
 
+/*  Tipical device break points
+-------------------------------
+telas pequenas: ate 600px
+Mobiles: de 600px ate 768px
+
+----------------------------- 
+Vale resaltar que as config acima ja 
+sao o pradrao que fizemos atraves do 
+conceito mobile first, sendo assim 
+precisamos declarar somente as configs 
+abaixo!
+-----------------------------
+
+Tablets: 768px ate 992px
+Desktops: 992px ate 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media print { /* Impressao */
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* Tablets */
+    body {
+        background-image: url(back-tablet.jpg);
+    }
+    img#phone { display: none; }
+    img#tablet { display:  block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* Desktop */
+    body {
+        background-image: url(back-pc.jpg);
+    }
+    img#phone { display: none; }
+    img#tablet { display:  none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1200px) { /* Grandes Telas */
+    body {
+        background-image: url(back-tv.jpg);
+    }
+    img#phone { display: none; }
+    img#tablet { display:  none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+}
